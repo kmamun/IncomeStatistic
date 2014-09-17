@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Team United's Submission </title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+	
+		<!--==========================NavBar============================== -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    	<div class="container">
+				<a class="navbar-brand" href="index.html">
+				<span class="glyphicon glyphicon-star"></span> Team United
+				</a>
+	        	<div class="navbar-collapse collapse">		    
+			    	<ul class="nav navbar-nav navbar-right">
+			        	<li><a href="aboutus.html"> 
+			        		<span class="glyphicon glyphicon-plus"></span> 
+			        		About Us </a>
+			        	</li>
+						<li><a href="contactus.html"> 
+							<span class="glyphicon glyphicon-user"></span> 
+							Contact Us </a>
+						</li>
+		        	</ul>
+				</div>
+	    	</div>
+		</nav>
+
+		<a name="myanchor">
+    	    <h1 style="padding-top: 120px; margin-top: -40px;"></h1>
+		</a>
+		<!--==========================NavBar============================== -->
+		<div style = "position:absolute; top:15% ; left:20%; border-width:1px ">
+		<form action="script/displayData.php" method="post">
+		<h2>Canadian Immigration Income Statistics</h2>
+		<fieldset>
+			<legend>Summary</legend>
+			<select id="Summary" name="Summary" class="form-control" required="required" onchange="script/displayData.php">
+			<option value="no" selected="">Choose One:</option>
+			<option value="sexMinMaxAvg">Data Statistics by Gender</option>
+			<option value="sexLandMinMaxAvg">Data Statistics by Land and Gender</option>
+			<option value="incomeTypes">Income types, quantity and totals</option>
+			<option value="incomeRanges">Summary of income distribution vary $50,000</option>
+			</select>
+
+		</fieldset>
+		</br>
+		<input type="button" value="Refresh page" class="btn btn-primary pull-left" onclick="location.reload(true);" />
+		</br>
+
+		</br></br>
+		<fieldset>
+		<legend> Advanced Options</legend>
+    
+		<table style= "text-align:center">
+			<tr>
+
+				<td>
+					<!--==========================Year Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Year"> Year </label>
+						<select id="Year" name="Year" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="1980">1980</option>
+							<option value="1981">1981</option>
+							<option value="1982">1982</option>
+							<option value="1983">1983</option>
+							<option value="1984">1984</option>
+							<option value="1985">1985</option>
+							<option value="1986">1986</option>
+							<option value="1987">1987</option>
+							<option value="1988">1988</option>
+							<option value="1989">1989</option>
+							<option value="1990">1990</option>
+							<option value="1991">1991</option>
+							<option value="1992">1992</option>
+							<option value="1993">1993</option>
+							<option value="1994">1994</option>
+							<option value="1995">1995</option>
+							<option value="1996">1996</option>
+							<option value="1997">1997</option>
+							<option value="1998">1998</option>
+							<option value="1999">1999</option>
+							<option value="2000">2000</option>
+							<option value="2001">2001</option>
+							<option value="2002">2002</option>
+							<option value="2003">2003</option>
+							<option value="2004">2004</option>
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+						</select>
+					</div>
+					<!--==========================Year Form============================== -->
+				</td>
+				
+
+				<td>
+					<!--==========================Sex Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Sex"> Gender</label>
+						<select id="Sex" name="Sex" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="M">Male</option>
+							<option value="F">Female</option>
+							<option value="B">Both</option>
+							<option value="NA">Not Specified</option>
+						</select>
+					</div>
+					<!--==========================Sex Form============================== -->
+				</td>
+
+
+				<td>
+					<!--==========================Land Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Land"> Age when Landed </label>
+						<select id="Land" name="Land" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="19-">Less than 20 years</option>
+							<option value="20-24">20 to 24 years</option>
+							<option value="25-34">25 to 34 years</option>
+							<option value="35-44">35 to 44 years</option>
+							<option value="45-54">45 to 54 years</option>
+							<option value="55-64">55 to 64 years</option>
+							<option value="65+">65 years and over</option>
+						</select>
+					</div>
+					<!--==========================Land Form============================== -->
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<!--==========================Immigration Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Immigration"> Type of Immigration </label>
+						<select id="Immigration" name="Immigration" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="SW">Skilled workers</option>
+							<option value="RLIC">Refugees landed in Canada</option>
+							<option value="RD">Refugee dependents</option>
+							<option value="PTN">Provincial/territorial nominees</option>
+							<option value="PSR">Privately sponsored refugees</option>
+							<option value="OI">Other immigrants</option>
+							<option value="LIC">Live-in caregivers</option>
+							<option value="GAR">Government-assisted refugees</option>
+							<option value="FC">Family class</option>
+							<option value="BC">Business class</option>
+							<option value="BCP">Backlog clearance program</option>
+							<option value="ARP">Administrative review program</option>
+						</select>
+					</div>
+					<!--==========================Immigration Form============================== -->
+				</td>
+
+				<td>
+					<!--==========================Years Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Landing"> Years </label>
+						<select id="Landing" name="Landing" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="SD">Spouses and Dependents</option>
+							<option value="HCPPC">Humanitarian and compassionate/Public policy cons</option>
+							<option value="PA">Principal applicants</option>
+							<option value="0">0 years since landing</option>
+							<option value="1">1 year since landing</option>
+							<option value="2">2 years since landing</option>
+							<option value="3">3 years since landing</option>
+							<option value="4">4 years since landing</option>
+							<option value="5">5 years since landing</option>
+							<option value="6">6 years since landing</option>
+							<option value="7">7 years since landing</option>
+							<option value="8">8 years since landing</option>
+							<option value="9">9 years since landing</option>
+							<option value="10">10 years since landing</option>
+							<option value="11">11 years since landing</option>
+							<option value="12">12 years since landing</option>
+							<option value="13">13 years since landing</option>
+							<option value="14">14 years since landing</option>
+							<option value="15">15 years since landing</option>
+							<option value="16">16 years since landing</option>
+							<option value="17">17 years since landing</option>
+							<option value="18">18 years since landing</option>
+							<option value="19">19 years since landing</option>
+							<option value="20">20 years since landing</option>
+							<option value="21">21 years since landing</option>
+							<option value="22">22 years since landing</option>
+							<option value="23">23 years since landing</option>
+							<option value="24">24 years since landing</option>
+							<option value="25">25 years since landing</option>
+							<option value="26">26 years since landing</option>
+							<option value="27">27 years since landing</option>
+							<option value="28">28 years since landing</option>
+							<option value="29">29 years since landing</option>
+							<option value="30">30 years since landing</option>
+							<option value="31">31 years since landing</option>
+						</select>
+					</div>
+					<!--==========================Years Form============================== -->
+				</td>
+
+
+				<td>
+					<!--==========================Income Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Income"> Income </label>
+						<select id="Income" name="Income" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="SD">Spouses and Dependents</option>
+							<option value="AI">All income </option>
+							<option value="EI">Employment income</option>
+							<option value="EIB">Employment insurance benefits</option>
+							<option value="II">Investment income</option>
+							<option value="SEI">Self-employment income</option>
+							<option value="SWB">Social welfare benefits</option>
+						</select>
+					</div>
+					<!--==========================Income Form============================== -->
+				</td>
+			</tr>
+			<tr style="padding-left:10px; left:25%; top:100%">
+				<td>
+					<!--==========================Status Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Status"> Status </label>
+						<select id="Status" name="Status" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="SD">Spouses and Dependents</option>
+							<option value="AI">All income </option>
+							<option value="EI">Employment income</option>
+							<option value="EIB">Employment insurance benefits</option>
+							<option value="II">Investment income</option>
+							<option value="SEI">Self-employment income</option>
+							<option value="SWB">Social welfare benefits</option>
+							<option value="MWI">Mean with income (dollars)</option>
+							<option value="MDWI">Median with income (dollars)</option>
+							<option value="TC">Total count (persons)</option>
+							<option value="TWI">Total with income (persons)</option>
+						</select>
+					</div>
+					<!--==========================Status Form============================== -->
+				</td>
+
+				<td>
+					<!--==========================Value Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Value"> Value Range </label>
+						<select id="Value" name="Value" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="0 and 25000">0 to 25,000</option>
+							<option value="25000 and 50000">25,000 to 50,000</option>
+							<option value="50000 and 75000">50,000 to 75,000</option>
+							<option value="75000 and 100000">75,000 to 100,000</option>
+							<option value="100000 and 125000">100,000 to 125,000</option>
+							<option value="125000 and 150000">125,000 to 150,000</option>
+							<option value="150000 and 175000">150,000 to 175,000</option>
+							<option value="175000 and 200000">175,000 to 200,000</option>
+							<option value="200000 and 225000">200,000 to 225,000</option>
+							<option value="225000 and 250000">225,000 to 250,000</option>
+							<option value="250000 and 275000">250,000 to 275,000</option>
+							<option value="275000 and 300000">275,000 to 300,000</option>
+							<option value="300000 and 325000">300,000 to 325,000</option>
+						</select>
+					</div>
+					<!--==========================Value Form============================== -->
+				</td>
+
+				<td>
+					<!--==========================Grouping Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Group"> Group by </label>
+						<select id="Group" name="Group" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="Ref_Date">Year</option>
+							<option value="SEX">Gender</option>
+							<option value="LAND">Age when landed</option>
+							<option value="IMMIGRA">Type of Immigration</option>
+							<option value="YEARS">Years</option>
+							<option value="INCOME">Income</option>
+							<option value="STATUS">Status</option>
+						</select>
+					</div>
+					<!--==========================Value Form============================== -->
+				</td>
+				
+				<td>
+					<!--==========================Grouping Form============================== -->
+					<div class="form-group" style="padding-right:10px">
+						<label for="Group2"> Group by </label>
+						<select id="Group2" name="Group2" class="form-control" required="required">
+							<option value="no" selected="">Choose One:</option>
+							<option value="Ref_Date">Year</option>
+							<option value="SEX">Gender</option>
+							<option value="LAND">Age when landed</option>
+							<option value="IMMIGRA">Type of Immigration</option>
+							<option value="YEARS">Years</option>
+							<option value="INCOME">Income</option>
+							<option value="STATUS">Status</option>
+						</select>
+					</div>
+					<!--==========================Value Form============================== -->
+				</td>
+				
+				</tr>
+			<tr style ="margin-left:50px; top: 150%; left:45%">
+				<td>
+					<div class = "row" style="padding-left:15px">
+						<button type="submit" class="btn btn-primary pull-left" id="btnSubmit"> Submit </button>
+					</div>
+				</td>
+			</tr>
+		</table>
+	  </fieldset>
+
+
+ <?php
+       include("script/displayData.php");
+
+?> 
+</form>
+	</div>
+
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

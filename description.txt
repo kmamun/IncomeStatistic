@@ -1,0 +1,62 @@
+Field SEX
+
+Both sexes = B
+Males = M
+Females = F
+Sex not stated = NA
+
+Field LAND
+
+Total landing age group = TLAG
+Less than 20 years = 19-
+20 to 24 years = 20-24
+25 to 34 years = 25-34
+35 to 44 years = 35-44
+45 to 54 years = 45-54
+55 to 64 years = 55-64
+65 years and over = 65+
+
+Field IMMIGRA
+
+Total immigration admission category = TIAC
+Skilled workers = SW
+Refugees landed in Canada = RLIC
+Refugee dependents = RD
+Provincial/territorial nominees = PTN
+Privately sponsored refugees = PSR
+Other immigrants = OI
+Live-in caregivers = LIC
+Government-assisted refugees = GAR
+Family class = FC
+Business class = BC
+Backlog clearance program = BCP
+Administrative review program = ARP
+
+Field YEARS
+
+humanitarian and compassionate/public policy cons = HCPPC
+principal applicants = PA
+spouses and dependents = SD
+
+Field INCOME
+
+spouses and dependents = SD
+All income = AI
+Employment income = EI
+Employment insurance benefits = EIB
+Investment income = II
+Self-employment income = SEI
+Social welfare benefits = SWB
+
+Field STATS
+
+All income = AI
+Employment income = EI
+Employment insurance benefits = EIB
+Investment income = II
+Self-employment income = SEI
+Social welfare benefits = SWB
+Mean with income (dollars) = MWI
+Median with income (dollars) = MDWI
+Total count (persons) = TC
+Total with income (persons) = TWI
